@@ -33,7 +33,9 @@ describe('Los estudiantes login', function() {
         cy.visit('https://losestudiantes.co')
       	cy.contains('Alfabético').click()
         cy.contains('Adolfo Jose Quiroz Salazar').click()
-
+        //4. Pruebe los filtros por materia en la página de un profesor
+        cy.get('.boxElement').find('[name="id:MATE1214C"]').check()
+        cy.contains("Calc.Integ-Ecuac.Diferen Compl")
 
     })
 })
